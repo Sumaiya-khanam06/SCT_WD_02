@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Animated Gradient Background */
+  background: linear-gradient(120deg, #ff6a6a, #ffd36a, #6affb1, #6ab8ff, #d26aff);
+  background-size: 500% 500%;
+  animation: gradientMove 16s ease infinite;
+  transition: 0.5s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*********************
+   DARK MODE
+*********************/
+body.dark {
+  filter: brightness(0.6);
+  color: white;
+}
+
+/*********************
+   TOP RIGHT BUTTON
+*********************/
+.theme-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 20px;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+body.dark .theme-btn {
+  background: rgba(0,0,0,0.6);
+  color: white;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/*********************
+   NAME + QUOTE
+*********************/
+.header-box {
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  width: 100%;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+.personal-quote {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  margin-top: -10px;
+  font-style: italic;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+/*********************
+   MOTIVATIONAL QUOTES
+*********************/
+.quote-box {
+  position: absolute;
+  top: 150px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+/*********************
+   STOPWATCH CARD
+*********************/
+.stopwatch {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.2);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  width: 330px;
+  text-align: center;
+  margin-top: 80px;
+  color: white;
+}
+
+.display {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Courier New", monospace;
+}
+
+/*********************
+   BUTTONS
+*********************/
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+button.start { background-color: #16a34a; }
+button.pause { background-color: #eab308; }
+button.reset { background-color: #dc2626; }
+button.lap   { background-color: #2563eb; }
+
+button:hover {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+/*********************
+   LAPS SECTION
+*********************/
+.laps {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: white;
+}

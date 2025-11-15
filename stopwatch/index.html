@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumaiya’s Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Dark / Light Toggle Button -->
+  <button id="toggleTheme" class="theme-btn">🌙</button>
+
+  <!-- Your Name + Quote -->
+  <div class="header-box">
+    <h1 class="name">✨ Sumaiya Khanam ✨</h1>
+    <p class="personal-quote">“Believe in your pace — your journey is unique.”</p>
+  </div>
+
+  <!-- Changing Quotes -->
+  <div class="quote-box">
+    <p id="quoteText">Motivational quote loading...</p>
+  </div>
+
+  <!-- Stopwatch -->
+  <div class="stopwatch">
+    <h2>⏱ Ultra Stopwatch</h2>
+    <div class="display" id="display">00:00.00</div>
+
+    <div class="buttons">
+      <button id="start" class="start">Start</button>
+      <button id="pause" class="pause" disabled>Pause</button>
+      <button id="reset" class="reset">Reset</button>
+      <button id="lap" class="lap" disabled>Lap</button>
+    </div>
+
+    <div class="laps" id="laps"></div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="soundStart" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+  <audio id="soundPause" src="https://assets.mixkit.co/sfx/preview/mixkit-click-error-1110.mp3"></audio>
+  <audio id="soundLap" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-bleep-10.mp3"></audio>
+  <audio id="soundReset" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-over-3064.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
